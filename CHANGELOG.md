@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.0.1 (2022-01-18)
+
+
+### Bug Fixes
+
+* **DOCS-001:** make docs without dots ([#1](https://github.com/0xmad/changelog-generation-example/issues/1)) ([8c6c411](https://github.com/0xmad/changelog-generation-example/commit/8c6c411121a1c00fd7e28b0e3ec171d5d0b5e63c))
+
 ## 1.0.0 (2022-01-18)
 
 
