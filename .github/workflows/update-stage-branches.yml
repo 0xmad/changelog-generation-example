@@ -27,7 +27,6 @@ jobs:
           branch: chore/update-stage-1
           labels: |
             stage-1
-            automated pr
           base: main
 
   update-stage-2:
@@ -51,5 +50,4 @@ jobs:
           branch: chore/update-stage-2
           labels: |
             stage-2
-            automated pr
           base: main
