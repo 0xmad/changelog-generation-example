@@ -19,11 +19,12 @@ jobs:
           token: ${{ secrets.PAT }}
           commit-message: update stage-1
           title: Update stage-1
-          branch: stage-1
+          branch-suffix: short-commit-hash
+          branch: chore/update-stage-1
           labels: |
             stage-1
             automated pr
-          base: main
+          base: stage-1
 
   updateStage2:
     runs-on: ubuntu-latest
@@ -38,8 +39,9 @@ jobs:
           token: ${{ secrets.PAT }}
           commit-message: update stage-2
           title: Update stage-2
-          branch: stage-2
+          branch-suffix: short-commit-hash
+          branch: chore/update-stage-2
           labels: |
             stage-2
             automated pr
-          base: main
+          base: stage-2
