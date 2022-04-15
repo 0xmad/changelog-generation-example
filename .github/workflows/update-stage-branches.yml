@@ -22,8 +22,8 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.PAT }}
-          commit-message: update stage-1
-          title: Update stage-1
+          commit-message: "chore: update stage-1"
+          title: "chore: update stage-1"
           branch-suffix: short-commit-hash
           branch: chore/update-stage-1
           labels: |
@@ -47,8 +47,8 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.PAT }}
-          commit-message: update stage-2
-          title: Update stage-2
+          commit-message: "chore: update stage-2"
+          title: "chore: update stage-2"
           branch-suffix: short-commit-hash
           branch: chore/update-stage-2
           labels: |
