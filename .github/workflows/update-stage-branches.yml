@@ -22,7 +22,6 @@ jobs:
           labels: |
             stage-1
             automated pr
-          delete-branch: true
           base: main
 
   updateStage2:
@@ -41,5 +40,4 @@ jobs:
           labels: |
             stage-2
             automated pr
-          delete-branch: true
           base: main
