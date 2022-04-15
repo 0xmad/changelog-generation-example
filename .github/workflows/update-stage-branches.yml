@@ -22,8 +22,8 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore: update stage-1"
           title: "chore: update stage-1"
+          commit-message: "chore: update stage-1"
           branch: chore/update-stage-1
           base: main
           labels: |
@@ -45,8 +45,8 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore: update stage-2"
           title: "chore: update stage-2"
+          commit-message: "chore: update stage-2"
           branch: chore/update-stage-2
           base: main
           labels: |
