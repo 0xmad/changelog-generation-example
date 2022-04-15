@@ -18,6 +18,11 @@ jobs:
           git fetch origin main:main
           git reset --hard main
 
+      - name: Reset promotion branch
+        run: |
+          git fetch origin main:main
+          git reset --hard main
+
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
@@ -37,6 +42,11 @@ jobs:
           ref: stage-2
 
       - name: Reset stage-2 branch
+        run: |
+          git fetch origin main:main
+          git reset --hard main
+
+      - name: Reset promotion branch
         run: |
           git fetch origin main:main
           git reset --hard main
