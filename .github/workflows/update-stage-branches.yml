@@ -19,7 +19,6 @@ jobs:
           token: ${{ secrets.PAT }}
           commit-message: update stage-1
           title: Update stage-1
-          branch-suffix: short-commit-hash
           branch: stage-1
           labels: |
             stage-1
@@ -39,7 +38,6 @@ jobs:
           token: ${{ secrets.PAT }}
           commit-message: update stage-2
           title: Update stage-2
-          branch-suffix: short-commit-hash
           branch: stage-2
           labels: |
             stage-2
