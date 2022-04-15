@@ -16,13 +16,13 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
+          token: ${{ secrets.PAT }}
           commit-message: update stage-1
           title: Update stage-1
           branch: stage-1
           labels: |
             stage-1
             automated pr
-          delete-branch: true
           base: main
 
   updateStage2:
@@ -35,11 +35,11 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
+          token: ${{ secrets.PAT }}
           commit-message: update stage-2
           title: Update stage-2
           branch: stage-2
           labels: |
             stage-2
             automated pr
-          delete-branch: true
           base: main
