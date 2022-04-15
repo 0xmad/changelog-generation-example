@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: production
+          ref: stage-1
 
       - name: Reset promotion branch
         run: |
@@ -21,8 +21,9 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
-          commit-message: "chore: update stage-1"
-          title: "chore: update stage-1"
+          token: ${{ secrets.PAT }}
+          commit-message: update stage-1
+          title: Update stage-1
           branch-suffix: short-commit-hash
           branch: chore/update-stage-1
           labels: |
@@ -35,7 +36,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: production
+          ref: stage-2
 
       - name: Reset promotion branch
         run: |
@@ -45,8 +46,9 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
-          commit-message: "chore: update stage-2"
-          title: "chore: update stage-2"
+          token: ${{ secrets.PAT }}
+          commit-message: update stage-2
+          title: Update stage-2
           branch-suffix: short-commit-hash
           branch: chore/update-stage-2
           labels: |
