@@ -1,0 +1,37 @@
+name: Update stage branches
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  updateStage1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: update changelog
+          title: Update stage-1
+          branch: stage-1
+          base: main
+
+  updateStage2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: update changelog
+          title: Update stage-2
+          branch: stage-2
+          base: main
