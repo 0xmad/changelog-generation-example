@@ -16,7 +16,7 @@ jobs:
       - name: Reset stage-1 branch
         run: |
           git fetch origin main:main
-          git reset --mixed
+          git reset --hard
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
@@ -39,7 +39,7 @@ jobs:
       - name: Reset stage-2 branch
         run: |
           git fetch origin main:main
-          git reset --mixed
+          git reset --hard
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
