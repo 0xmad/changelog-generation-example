@@ -20,7 +20,6 @@ jobs:
           git fetch origin main:main
           git reset $(git merge-base main $(git rev-parse --abbrev-ref HEAD))
           git add .
-          git commit -m 'chore: merge main into stage-1'
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
@@ -48,7 +47,6 @@ jobs:
           git fetch origin main:main
           git reset $(git merge-base main $(git rev-parse --abbrev-ref HEAD))
           git add .
-          git commit -m 'chore: merge main into stage-2'
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
