@@ -11,12 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: stage-1
-
-      - name: Reset stage-1 branch
-        run: |
-          git fetch origin main:main
-          git reset --hard main
+          ref: production
 
       - name: Reset promotion branch
         run: |
@@ -39,12 +34,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          ref: stage-2
-
-      - name: Reset stage-2 branch
-        run: |
-          git fetch origin main:main
-          git reset --hard main
+          ref: production
 
       - name: Reset promotion branch
         run: |
