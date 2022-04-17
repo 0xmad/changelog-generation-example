@@ -6,40 +6,46 @@ on:
       - main
 
 jobs:
-  updateStage1:
+  update-stage-a:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          ref: stage-a
+      
+      - name: Reset promotion branch
+        run: |
+          git fetch origin main:main
+          git reset --hard main
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
-          commit-message: update stage-1
-          title: Update stage-1
-          branch: stage-1
+          branch: chore/update-stage-a
+          commit-message: "chore: update stage-a"
+          title: "chore: update stage-a"
           labels: |
             stage-1
-            automated pr
-          delete-branch: true
           base: main
 
-  updateStage2:
+  update-stage-b:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          ref: stage-b
+      
+      - name: Reset promotion branch
+        run: |
+          git fetch origin main:main
+          git reset --hard main
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
-          commit-message: update stage-2
-          title: Update stage-2
-          branch: stage-2
+          branch: chore/update-stage-b
+          commit-message: "chore: update stage-b"
+          title: "chore: update stage-b"
           labels: |
             stage-2
-            automated pr
-          delete-branch: true
           base: main
