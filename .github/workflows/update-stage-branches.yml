@@ -13,7 +13,7 @@ jobs:
         with:
           ref: stage-a
       
-      - name: Reset stage-a branch
+      - name: Reset promotion branch
         run: |
           git fetch origin main:main
           git reset --hard main
@@ -35,7 +35,7 @@ jobs:
         with:
           ref: stage-b
       
-      - name: Reset stage-b branch
+      - name: Reset promotion branch
         run: |
           git fetch origin main:main
           git reset --hard main
